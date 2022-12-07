@@ -23,6 +23,9 @@ module.exports = (sequelize, DataTypes) => {
     nombre: {
       allowNull: false,
       type: DataTypes.STRING,
+      validate: {
+        isAlpha: true,
+      }
     },
     apellido: {
       allowNull: false,
